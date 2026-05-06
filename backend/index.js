@@ -19,7 +19,7 @@ app.get('/multas', (req, res) => Multa.getAll(req, res));
 app.get('/multas/:id', (req, res) => Multa.getById(req, res));
 app.put('/multas/:id', (req, res) => Multa.update(req, res));
 app.get('/multas/validar_vencimento/:id', (req, res) => Multa.validar_vencimento(req, res));
-app.post('/multas/multa_paga', (req, res) => Multa.multa_paga(req, res));
+app.put('/multas/multa_paga/:id', (req, res) => Multa.multa_paga(req, res));
 
 app.post('/tipos', (req, res) => Tipo.create(req, res));
 app.get('/tipos', (req, res) => Tipo.getAll(req, res));
